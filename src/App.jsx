@@ -13,14 +13,13 @@ import Loader from "react-loader-spinner";
 import "App.module.css";
 
 const App = () => {
+  const [bigImageUrl, setBigImageUrl] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [images, setImages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [bigImageUrl, setBigImageUrl] = useState("");
   const [imageStatus, setImageStatus] = useState("loading");
-
   const onSearchHandle = (query) => {
     setSearchQuery(query);
     setCurrentPage(1);
